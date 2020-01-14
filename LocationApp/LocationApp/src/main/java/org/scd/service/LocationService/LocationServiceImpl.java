@@ -19,8 +19,7 @@ import java.util.Objects;
 public class LocationServiceImpl implements  LocationService {
     @Autowired
     private LocationRepository locationRepository;
-    @Autowired
-    private RoleRepository roleRepository;
+
 
     @Override
     public Location createLocation(CustomUserDetails customUserDetails, Location location) throws BusinessException {

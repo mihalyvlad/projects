@@ -19,6 +19,6 @@ public interface LocationRepository  extends CrudRepository<Location,Long> {
     @Query(value = "SELECT location FROM Location location WHERE location.date <=:endDate AND location.date >=:startDate AND location.user.id =:user_id")
   List<Location> findLocations (Date startDate, Date endDate,  Long userId);
 */
-@Query("SELECT l FROM Location l WHERE  l.creationDate >=:startDate AND l.creationDate <=:endDate and l.user.id=:userId")
+@Query("SELECT l FROM Location l WHERE  l.creationDate >=:startDate AND l.creationDate <=:endDate AND l.user.id=:userId")
 List<Location> findByDate (Long userId, Date startDate,Date endDate);
 }

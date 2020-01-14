@@ -30,7 +30,7 @@ public class LocationController {
     LocationService locationService;
 
 
-    @PostMapping(path = "/createLocation")
+    @PostMapping()
     public ResponseEntity<Location> createLocation(@RequestBody final Location location) throws BusinessException {
 
 
@@ -56,8 +56,8 @@ public class LocationController {
 
     }
 
-    @GetMapping("/users/{userId}")
-    public ResponseEntity<List<Location>> getPositionByTimeInterval(@PathVariable final Long userId, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @RequestParam final Date startDate, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @RequestParam final    Date endDate) throws BusinessException {
+    @GetMapping("/interval/{userId}")
+    public ResponseEntity<List<Location>> getLocationByDateInterval(@PathVariable final Long userId, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @RequestParam final Date startDate, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @RequestParam final    Date endDate) throws BusinessException {
         return ResponseEntity.ok ( locationService.findByDate (userId,startDate,endDate));}
    }
 
