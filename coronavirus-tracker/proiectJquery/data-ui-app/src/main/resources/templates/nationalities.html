@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="webjars/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet"/>
+    <script type="text/javascript" src="webjars/jquery/3.4.1/jquery.js"></script>
+    <script type="text/javascript" src="webjars/bootstrap/4.4.1/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/main.js" th:src="@{main.js}"></script>
+
+
+
+    <meta charset="ISO-8859-1">
+    <title>Nationalities</title>
+    <style type="text/css">
+        #addModal {
+        }
+
+        #editModal {
+        }
+    </style>
+</head>
+<body>
+<h2>
+List of Nationalities
+</h2>
+<div class="container">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal" >Add New</button>
+
+    <table class="table table-striped">
+    <tr>
+        <td>Id</td>
+        <td>Capital</td>
+        <td>Name</td>
+        <td>UpdatedBy</td>
+        <td>UpdatedOn</td>
+        <td> Edit</td>
+        <td> Delete</td>
+    </tr>
+    <!-- extract data from the model with THleaf-->
+     <tr th:each="nationality:${nationalities}">
+    <td th:text="${nationality.Id}">Id</td>
+    <td th:text="${nationality.name}">Name</td>
+    <td th:text="${nationality.capital}">Capital</td>
+    <td th:text="${nationality.updatedBy}">UpdatedBy</td>
+    <td th:text="${nationality.updatedOn}"> UpdatedOn</td>
+         <td><a th:href="@{/onenationality/(Id=${nationality.Id})}" class="btn btn-warning editButton" data-toggle="modal" data-target="#editModal">Edit</a>
+             <a th:href="@{/delete/(Id=${nationality.Id})}"class="btn btn-danger deleteButton"> Delete</a>
+         </td>
+     </tr>
+</table>
+</div>
+<div aria-hidden="true"  class="modal fade" id="addModal" role="dialog" tabindex="-1">
+    <form th:action="@{/addNew/}"method="post">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Nationality</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="Id" class="col-form-label">Id:</label>
+                    <input type="text" class="form-control" id="IdAdd" name="Id">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="name" class="col-form-label">Name:</label>
+                    <input type="text" class="form-control" id="nameAdd" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="capital" class="col-form-label">Capital:</label>
+                    <input type="text" class="form-control" id="capitalAdd" name="capital">
+                </div>
+                <div class="form-group">
+                    <label for="updatedBy" class="col-form-label">UpdatedBy:</label>
+                    <input type="text" class="form-control" id="updatedByAdd" name="updatedBy">
+                </div>
+                <div class="form-group">
+                    <label for="updatedOn" class="col-form-label">UpdatedOn:</label>
+                    <input type="text" class="form-control" id="updatedOnAdd" name="updatedOn">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+<div aria-hidden="true"  class="modal fade" id="editModal" role="dialog" tabindex="-1">
+    <form th:action="@{/save/}" method="put">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Nationality</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="form-group">
+                        <label for="Id" class="col-form-label">Id:</label>
+                        <input type="text" class="form-control" id="idEdit" name="Id">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="nameEdit" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="capital" class="col-form-label">Capital:</label>
+                        <input type="text" class="form-control" id="capitalEdit" name="capital">
+                    </div>
+                    <div class="form-group">
+                        <label for="updatedBy" class="col-form-label">UpdatedBy:</label>
+                        <input type="text" class="form-control" id="updatedByEdit" name="updatedBy">
+                    </div>
+                    <div class="form-group">
+                        <label for="updatedOn" class="col-form-label">UpdatedOn:</label>
+                        <input type="text" class="form-control" id="updatedOnEdit" name="updatedOn">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the selected record?</p>
+            </div>
+            <div class="modal-footer">
+                <a href ="" class="btn btn-dangger" id="deleteId">Yes, delete it!</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
