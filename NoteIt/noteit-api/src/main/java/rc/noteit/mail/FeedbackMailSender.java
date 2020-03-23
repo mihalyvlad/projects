@@ -6,7 +6,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FeedbackMailSender implements FeedbackSender {
+public class  FeedbackMailSender implements FeedbackSender {
     private JavaMailSenderImpl mailSender;
 
     public FeedbackMailSender(Environment environment){

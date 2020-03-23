@@ -19,10 +19,11 @@
     </style>
 </head>
 <body>
-<h2>
-List of Nationalities
-</h2>
+
 <div class="container">
+    <h2>
+        List of Nationalities
+    </h2>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal" >Add New</button>
 
     <table class="table table-striped">
@@ -43,7 +44,8 @@ List of Nationalities
     <td th:text="${nationality.updatedBy}">UpdatedBy</td>
     <td th:text="${nationality.updatedOn}"> UpdatedOn</td>
          <td><a th:href="@{/onenationality/(Id=${nationality.Id})}" class="btn btn-warning editButton" data-toggle="modal" data-target="#editModal">Edit</a>
-             <a th:href="@{/delete/(Id=${nationality.Id})}"class="btn btn-danger deleteButton"> Delete</a>
+         </td>
+         <td>   <a th:href="@{/delete/(Id=${nationality.Id})}"class="  btn btn-danger deleteButton"> Delete</a>
          </td>
      </tr>
 </table>

@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d70f5427-ef51-48a1-8646-ee8318d32ec6" name="Default Changelist" comment="" />
+    <list default="true" id="d70f5427-ef51-48a1-8646-ee8318d32ec6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../proiectJquery/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../proiectJquery/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../proiectJquery/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../proiectJquery/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NoteIt/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../NoteIt/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NoteIt/.idea/NoteIt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NoteIt/.idea/NoteIt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NoteIt/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NoteIt/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NoteIt/noteit-api/src/main/java/rc/noteit/mail/FeedbackMailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NoteIt/noteit-api/src/main/java/rc/noteit/mail/FeedbackMailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NoteIt/noteit-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../NoteIt/noteit-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NoteIt/noteit.db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../NoteIt/noteit.db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiectJquery/data-ui-app/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../proiectJquery/data-ui-app/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiectJquery/data-ui-app/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../proiectJquery/data-ui-app/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiectJquery/data-ui-app/src/main/resources/templates/nationalities.html" beforeDir="false" afterPath="$PROJECT_DIR$/../proiectJquery/data-ui-app/src/main/resources/templates/nationalities.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/proiectSCDULTIMA/testLocApptest" />
+    <property name="last_opened_file_path" value="D:/coronavirus-tracker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,6 +68,9 @@
       <updated>1578347172521</updated>
       <workItem from="1578347175586" duration="11000" />
       <workItem from="1578383944784" duration="2026000" />
+      <workItem from="1583997316523" duration="34000" />
+      <workItem from="1584006620212" duration="612000" />
+      <workItem from="1584783663674" duration="35000" />
     </task>
     <servers />
   </component>
@@ -60,13 +78,16 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1578393788372">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="687" y="225" key="FileChooserDialogImpl" timestamp="1584783685285">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1578393788372" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1578383979459">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2378" y="213" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1280.1024@1920.0.1280.1024" timestamp="1584006630602" />
+    <state x="687" y="225" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584783685285" />
+    <state x="2318" y="299" key="com.intellij.ide.util.TipDialog" timestamp="1584006625503">
+      <screen x="1920" y="0" width="1280" height="1024" />
     </state>
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1578383979459" />
+    <state x="2318" y="299" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1280.1024@1920.0.1280.1024" timestamp="1584006625503" />
   </component>
 </project>
